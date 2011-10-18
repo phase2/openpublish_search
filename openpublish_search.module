@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the openpublish_search feature.
+ */
+
+include_once('openpublish_search.features.inc');
