@@ -569,10 +569,38 @@ function openpublish_search_default_search_api_server() {
       "database" : "default:default",
       "min_chars" : "1",
       "indexes" : {
+        "test" : {
+          "search_api_language" : {
+            "table" : "search_api_db_test_search_api_language",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "title" : { "table" : "search_api_db_test_title", "type" : "text", "boost" : "1.0" },
+          "status" : {
+            "table" : "search_api_db_test_status",
+            "type" : "boolean",
+            "boost" : "1.0"
+          },
+          "field_op_blogpost_blog" : {
+            "table" : "search_api_db_test_field_op_blogpost_blog",
+            "type" : "integer",
+            "boost" : "1.0"
+          }
+        },
         "openpublish_node_index" : {
           "search_api_language" : {
             "table" : "search_api_db_openpublish_node_index_search_api_language",
             "type" : "string",
+            "boost" : "1.0"
+          },
+          "search_api_node_taxonomy_list_tid" : {
+            "table" : "search_api_db_openpublish_node_index_search_api_node_taxonomy_l",
+            "type" : "list\\u003cinteger\\u003e",
+            "boost" : "1.0"
+          },
+          "search_api_node_taxonomy_list_term" : {
+            "table" : "search_api_db_openpublish_node_index_search_api_node_taxonomy_1",
+            "type" : "list\\u003cstring\\u003e",
             "boost" : "1.0"
           },
           "nid" : {
@@ -608,34 +636,6 @@ function openpublish_search_default_search_api_server() {
           "field_op_author:title" : {
             "table" : "search_api_db_openpublish_node_index_field_op_author_title",
             "type" : "list\\u003cstring\\u003e",
-            "boost" : "1.0"
-          },
-          "search_api_node_taxonomy_list_tid" : {
-            "table" : "search_api_db_openpublish_node_index_search_api_node_taxonomy_l",
-            "type" : "list\\u003cinteger\\u003e",
-            "boost" : "1.0"
-          },
-          "search_api_node_taxonomy_list_term" : {
-            "table" : "search_api_db_openpublish_node_index_search_api_node_taxonomy_1",
-            "type" : "list\\u003cstring\\u003e",
-            "boost" : "1.0"
-          }
-        },
-        "test" : {
-          "search_api_language" : {
-            "table" : "search_api_db_test_search_api_language",
-            "type" : "string",
-            "boost" : "1.0"
-          },
-          "title" : { "table" : "search_api_db_test_title", "type" : "text", "boost" : "1.0" },
-          "status" : {
-            "table" : "search_api_db_test_status",
-            "type" : "boolean",
-            "boost" : "1.0"
-          },
-          "field_op_blogpost_blog" : {
-            "table" : "search_api_db_test_field_op_blogpost_blog",
-            "type" : "integer",
             "boost" : "1.0"
           }
         }
