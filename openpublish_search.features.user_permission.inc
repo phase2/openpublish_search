@@ -15,6 +15,8 @@ function openpublish_search_user_default_permissions() {
     'name' => 'use search_api_facets',
     'roles' => array(
       0 => 'administrator',
+      1 => 'anonymous user',
+      2 => 'authenticated user',
     ),
     'module' => 'search_api_facets',
   );
